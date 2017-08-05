@@ -24,26 +24,23 @@
 # 
 # 
 
-echo "\n"
-echo "Updating all existing packages...\n"
+
+echo "Updating all existing packages..."
 sudo apt-get -y update
-
-echo "\n"
-echo "Getting requierd libraries \n"
- 
-
-
-echo "\n"
+echo "..........................................."
 echo "Installing Python Libraries"
 sudo apt-get install -y build-essential python-dev python-smbus python-pip  python-imaging git
-echo "Installing Adafruit LEDBackpack Libraries\n"
+echo "Installing Adafruit LEDBackpack Libraries"
 git clone https://github.com/adafruit/Adafruit_Python_LED_Backpack.git
 cd Adafruit_Python_LED_Backpack
 echo  "Running Adafruit Install \n"
 sudo python setup.py install 
-echo "Getting Feedparser \n"
+echo "Getting Feedparser "
 sudo pip install feedparser
- 
-echo "\n"
-echo "Done! Read the readme file to set up a project\n"
+cd ..
+rm -r Adafruit_Python_LED_Backpack
+
+echo "Done! Run the Rss with python RssLED.py "
+echo "Default Rss Feed is Reuters US Domestic News"
+echo "sudo nano RssLED.py to edit which feed"
 exit 0
