@@ -9,8 +9,12 @@ outputing to an Adafruit Alphanumeric LED Backpack diplay
 ## To install 
 
 git clone http://github.com/Epikarsios/RssLEDBackpack.git
+<br />
 cd RssLEDBackpack
+<br />
 sudo bash
+<br />
 chmod 777 RssLEDBackpack.sh
+<br />
 ./RssLEDBackpack.sh
 
